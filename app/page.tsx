@@ -7,12 +7,34 @@ import { Card, CardContent } from "@/components/ui/card";
 import sponsors from "../components/data/sponsors.json";
 import Sponsors from "../components/sponsors";
 import Footer from "../components/footer";
+import Link from "next/link";
 
 
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-white font-sans">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white sm:items-start">
+        <header className="w-full mb-8">
+          <nav className="flex justify-between items-center">
+            <ul className="flex gap-4">
+              <li>
+                <Link href="#about">About</Link>
+              </li>
+              <li>
+                <Link href="#faqs">FAQs</Link>
+              </li>
+              <li>
+                <Link href="#sponsors">Sponsors</Link>
+              </li>
+              <li>
+                <Link href="/schedule">Schedule</Link>
+              </li>
+              <li>
+                <Link href="/apply">Apply</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
         <Image
           src="/next.svg"
           alt="Next.js logo"

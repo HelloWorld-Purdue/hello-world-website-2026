@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Faqs ({ Card, faqs, CardContent }) {
     return (
-        <section id="faq" className="py-20 px-4 bg-gradient-to-br from-background via-muted to-muted">
+        <section id="faqs" className="py-20 px-4 bg-gradient-to-br from-background via-muted to-muted">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-6xl font-bold mb-6 text-black">
@@ -28,4 +28,3 @@ export default function Faqs ({ Card, faqs, CardContent }) {
         </section>
     );
 };
-
