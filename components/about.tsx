@@ -1,9 +1,9 @@
 import React from "react";
 
 
-const About = ({ Button }) => {
+const About = () => {
     return (
-        <section id="about" className="py-20 px-4 bg-gradient-to-br from-background via-muted to-card">
+        <section id="about" className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-foreground text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text">

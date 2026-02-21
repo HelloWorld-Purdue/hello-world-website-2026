@@ -1,8 +1,14 @@
 import React from "react";
 
-export default function Faqs ({ Card, faqs, CardContent }) {
+interface FaqsProps {
+  Card: React.ComponentType<any>;
+  faqs: Array<{ question: string; answer: string }>;
+  CardContent: React.ComponentType<any>;
+}
+
+export default function Faqs ({ Card, faqs, CardContent }: FaqsProps) {
     return (
-        <section id="faqs" className="py-20 px-4 bg-gradient-to-br from-background via-muted to-muted">
+        <section id="faqs" className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-6xl font-bold mb-6 text-black">
@@ -12,7 +18,7 @@ export default function Faqs ({ Card, faqs, CardContent }) {
                 </div>
 
                 <div className="space-y-6">
-                    {faqs.map((faq, index) => (
+                    {faqs.map((faq: any, index: any) => (
                         <Card
                             key={index}
                             className="hover:shadow-lg transition-shadow duration-300 border-2 border-border hover:border-primary/50"

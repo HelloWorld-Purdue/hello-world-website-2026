@@ -12,7 +12,7 @@ import React from "react";
  */
 export default function Footer({ sponsorLogoSrc = "/images/sfab.jpg", sponsorHref = "#" }) {
     return (
-        <footer className="bg-gradient-to-br from-background to-muted text-background py-12 px-4">
+        <footer className="py-12 px-4">
             <div className="max-w-6xl mx-auto text-center">
                 <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                     HelloWorld

@@ -1,8 +1,19 @@
 import React from "react";
 import FlowingMenu from "./ui/FlowingMenu";
-export default function Sponsors ({ Card, CardContent, sponsors }) {
+
+interface Sponsor {
+  text: string;
+  image: string;
+  link: string;
+}
+
+interface SponsorsProps {
+  sponsors: Sponsor[];
+}
+
+export default function Sponsors ({ sponsors }: SponsorsProps) {
     return (
-        <section id="sponsors" className="py-20 px-4 bg-purple"> {/* Maybe bg-background instead */}
+        <section id="sponsors" className="py-20 px-4">
             <div style={{ height: '100px', position: 'relative' }}>
                 <FlowingMenu items={sponsors} />
             </div>

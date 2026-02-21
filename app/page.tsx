@@ -9,35 +9,24 @@ import Sponsors from "../components/sponsors";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
 import Header from "@/components/header";
+import ParallaxSection from "@/components/parallax-section";
 
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-white font-sans">
-      <main className="flex min-h-screen w-full flex-col items-center justify-between bg-white">
+    <div className="flex min-h-screen items-center justify-center font-sans">
+      <main className="flex min-h-screen w-full flex-col items-center justify-between">
         <Header />
         <Hero />
-        <About Button={Button} />
-        <Faqs Card={Card} faqs={faqs} CardContent={CardContent} />
-        {<Sponsors
-              Card={Card}
-              CardContent={CardContent}
-              sponsors={sponsors}
-            />}
+        <ParallaxSection>
+          <About />
+          <Faqs Card={Card} faqs={faqs} CardContent={CardContent} />
+          <Sponsors sponsors={sponsors} />
 
-        <div className="footer">
-          <Footer />
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          <div className="footer">
+            <Footer />
+          </div>
+        </ParallaxSection>
       </main>
     </div>
   );

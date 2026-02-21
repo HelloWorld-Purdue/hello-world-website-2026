@@ -4,7 +4,13 @@ import { gsap } from 'gsap';
 
 import './FlowingMenu.css';
 
-function FlowingMenu({ items = [] }) {
+interface FlowingMenuItem {
+  text: string;
+  image: string;
+  link: string;
+}
+
+function FlowingMenu({ items = [] }: { items?: FlowingMenuItem[] }) {
   return (
     <div className="menu-wrap">
       <nav className="menu">
