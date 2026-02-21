@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What exactly is a hackathon?",
+    "answer": "A hackathon is an 'invention marathon'! It's a 24-hour event where you team up with other students to learn new skills and build a software or hardware project from scratch. It's not about 'hacking' in a security sense, but about creating something new in a fun, supportive, and collaborative environment."
+  },
+  {
+    "question": "How much does it cost?",
+    "answer": "Nothing! HelloWorld is completely free for all accepted participants thanks to our amazing sponsors. We'll provide meals, drinks, snacks, a place to work, and plenty of workshops throughout the event."
+  },
+  {
+    "question": "What if I don't have a team?",
+    "answer": "No problem at all! You can find a team during our dedicated team-building event after check-in. You can also work on a project by yourself if you prefer. Teams can be up to 4 members."
+  },
+  {
+    "question": "What should I bring?",
+    "answer": "We'll provide the essentials for a productive weekend: your workspace, reliable Wi-Fi, access to power via extension cables, and all your meals, snacks, and drinks. All you absolutely NEED to bring are your student ID (for check-in), your computer, and any device chargers."
+  },
+  {
+    "question": "I have another question!",
+    "answer": "We're happy to answer it! During the event, the fastest way to get help is to ask in our Discord server or find a team member in person. We will have organizers on-site and available to help you 24/7."
+  }
+]
