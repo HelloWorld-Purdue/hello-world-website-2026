@@ -8,12 +8,14 @@ import sponsors from "../components/data/sponsors.json";
 import Sponsors from "../components/sponsors";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
+import Header from "@/components/header";
 
 
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-white font-sans">
       <main className="flex min-h-screen w-full flex-col items-center justify-between bg-white">
+        <Header />
         <Hero />
         <About Button={Button} />
         <Faqs Card={Card} faqs={faqs} CardContent={CardContent} />
