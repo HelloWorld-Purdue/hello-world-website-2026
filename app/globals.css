@@ -126,7 +126,12 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+    background-color: #050510;
+  }
   body {
-    @apply bg-background text-foreground;
+    background: transparent;
+    color: white;
   }
 }

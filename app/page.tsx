@@ -1,44 +1,25 @@
-import Image from "next/image";
 import About from "../components/about";
-import {Button} from "@/components/ui/button";
 import faqs from "../components/data/faqs.json";
 import Faqs from "../components/faqs";
-import { Card, CardContent } from "@/components/ui/card";
-import sponsors from "../components/data/sponsors.json";
 import Sponsors from "../components/sponsors";
+import SponsorTrack from "../components/sponsor-track";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
 import Header from "@/components/header";
+import ParallaxBackground from "@/components/parallax-background";
 
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-white font-sans">
-      <main className="flex min-h-screen w-full flex-col items-center justify-between bg-white">
-        <Header />
-        <Hero />
-        <About Button={Button} />
-        <Faqs Card={Card} faqs={faqs} CardContent={CardContent} />
-        {<Sponsors
-              Card={Card}
-              CardContent={CardContent}
-              sponsors={sponsors}
-            />}
-
-        <div className="footer">
-          <Footer />
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="flex min-h-screen w-full flex-col items-center justify-between font-sans">
+      <ParallaxBackground />
+      <Header />
+      <Hero />
+      <About />
+      <Faqs faqs={faqs} />
+      <Sponsors />
+      <SponsorTrack />
+      <Footer />
+    </main>
   );
 }
