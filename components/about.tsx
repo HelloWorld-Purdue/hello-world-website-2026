@@ -8,29 +8,16 @@ const About = () => {
                     <h2 className="text-white text-6xl font-bold mb-6 [text-shadow:0_2px_30px_rgba(0,0,0,0.8)]">
                         About HelloWorld
                     </h2>
-                    <div className="w-24 h-px bg-white/50 mx-auto"></div>
+                    <div className="w-24 h-px bg-white/30 mx-auto"></div>
                 </div>
 
-                {/* Textbox frame with text inside */}
-                <div className="relative w-full max-w-2xl mx-auto">
-                    <img
-                        src="/images/textbox.png"
-                        alt=""
-                        className="w-full h-auto"
-                        draggable={false}
-                    />
-                    {/* Text overlaid inside the cream area of the frame */}
-                    <div
-                        className="absolute inset-0 flex flex-col justify-center"
-                        style={{ padding: '16% 24% 22% 24%' }}
-                    >
-                        <h3 className="text-base md:text-xl font-bold mb-3 text-black text-center leading-snug">
-                            The Midwest's Largest Beginner-Friendly Hackathon
-                        </h3>
-                        <p className="text-xs md:text-sm text-black leading-relaxed text-center">
-                            HelloWorld is a 24-hour coding marathon where you can turn your ideas into reality. Our mission is to empower students just starting their journey in tech — ensuring a level playing field for everyone to learn, experiment, and bring their first big idea to life.
-                        </p>
-                    </div>
+                <div className="bg-white/15 border border-white/20 rounded-2xl p-8 md:p-12 max-w-2xl mx-auto">
+                    <h3 className="text-xl font-bold mb-4 text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.8)]">
+                        The Midwest's Largest Beginner-Friendly Hackathon
+                    </h3>
+                    <p className="text-white/90 leading-relaxed [text-shadow:0_1px_12px_rgba(0,0,0,0.7)]">
+                        HelloWorld is a 24-hour coding marathon where you can turn your ideas into reality. Our mission is to empower students just starting their journey in tech — ensuring a level playing field for everyone to learn, experiment, and bring their first big idea to life.
+                    </p>
                 </div>
             </div>
         </section>

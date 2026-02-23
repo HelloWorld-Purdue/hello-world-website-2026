@@ -13,7 +13,7 @@ const Hero = () => {
           Purdue University · 2026
         </p>
         <img
-          src="/images/logo white cropped.png"
+          src="/images/logo.png"
           alt="HelloWorld"
           className="mx-auto mb-8 w-72 md:w-[480px] h-auto [filter:drop-shadow(0_4px_40px_rgba(0,0,0,0.7))]"
           draggable={false}

@@ -19,7 +19,7 @@ export default function Faqs ({ faqs }) {
                     {faqs.map((faq, i) => {
                         const isOpen = openIndex === i;
                         return (
-                            <div key={i} className="border border-white/50 rounded-2xl overflow-hidden hover:border-white/80 transition-colors duration-200">
+                            <div key={i} className="bg-white/15 border border-white/20 rounded-2xl overflow-hidden hover:border-white/35 transition-colors duration-200">
                                 <button
                                     className="w-full flex justify-between items-center px-8 py-6 text-left gap-4"
                                     onClick={() => setOpenIndex(isOpen ? null : i)}

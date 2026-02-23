@@ -20,7 +20,7 @@ export default function Header() {
       <nav className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
         <Link href="/" className="shrink-0">
           <img
-            src="/images/logo white cropped.png"
+            src="/images/logo.png"
             alt="HelloWorld"
             className="h-10 w-auto"
             draggable={false}
