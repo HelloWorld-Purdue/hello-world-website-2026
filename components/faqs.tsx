@@ -19,7 +19,7 @@ export default function Faqs ({ faqs }) {
                     {faqs.map((faq, i) => {
                         const isOpen = openIndex === i;
                         return (
-                            <div key={i} className="border border-white/20 rounded-2xl overflow-hidden hover:border-white/35 transition-colors duration-200">
+                            <div key={i} className="border border-white/50 rounded-2xl overflow-hidden hover:border-white/80 transition-colors duration-200">
                                 <button
                                     className="w-full flex justify-between items-center px-8 py-6 text-left gap-4"
                                     onClick={() => setOpenIndex(isOpen ? null : i)}
@@ -40,7 +40,7 @@ export default function Faqs ({ faqs }) {
                                 </button>
 
                                 <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[500px]' : 'max-h-0'}`}>
-                                    <p className="px-8 pb-6 text-white/70 leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.7)]">
+                                    <p className="px-8 pb-6 text-white leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
                                         {faq.answer}
                                     </p>
                                 </div>
