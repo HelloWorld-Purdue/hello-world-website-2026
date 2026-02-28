@@ -20,7 +20,7 @@ export default function Home() {
         <Hero />
         <ParallaxSection>
           <About />
-          <Faqs Card={Card} faqs={faqs} CardContent={CardContent} />
+          <Faqs faqs={faqs} />
           <Sponsors sponsors={sponsors} />
 
           <div className="footer">

@@ -1,12 +1,16 @@
+'use client';
+
 import React from "react";
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 interface FaqsProps {
-  Card: React.ComponentType<any>;
   faqs: Array<{ question: string; answer: string }>;
-  CardContent: React.ComponentType<any>;
 }
 
-export default function Faqs ({ Card, faqs, CardContent }: FaqsProps) {
+export default function Faqs ({ faqs }: FaqsProps) {
     return (
         <section id="faqs" className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
@@ -18,16 +22,32 @@ export default function Faqs ({ Card, faqs, CardContent }: FaqsProps) {
                 </div>
 
                 <div className="space-y-6">
-                    {faqs.map((faq: any, index: any) => (
-                        <Card
+                    {faqs.map((faq, index) => (
+                        <Accordion
                             key={index}
-                            className="hover:shadow-lg transition-shadow duration-300 border-2 border-border hover:border-primary/50"
+                            elevation={0}
+                            disableGutters
+                            sx={{
+                                backgroundColor: 'transparent',
+                                boxShadow: 'none',
+                                '&:before': { display: 'none' },
+                            }}
                         >
-                            <CardContent className="p-8">
-                                <h3 className="text-xl font-semibold mb-4 text-[#000000]">{faq.question}</h3>
-                                <p className="text-card-foreground leading-relaxed">{faq.answer}</p>
-                            </CardContent>
-                        </Card>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls={`panel${index}-content`}
+                                id={`panel${index}-header`}
+                            >
+                                <h3 className="text-xl font-semibold mb-4 text-[#000000]">
+                                    {faq.question}
+                                </h3>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <p className="text-card-foreground leading-relaxed">
+                                    {faq.answer}
+                                </p>
+                            </AccordionDetails>
+                        </Accordion>
                     ))}
                 </div>
             </div>
