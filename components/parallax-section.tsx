@@ -11,10 +11,12 @@ export default function ParallaxSection({ children }: { children: React.ReactNod
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Move background at 20% of scroll speed for parallax effect
-      el.style.backgroundPositionY = `${scrollY * 0.2}px`;
+      const elementTop = el.offsetTop;
+      // Offset by element's top so background aligns at 0 when section enters view
+      el.style.backgroundPositionY = `${(scrollY - elementTop) * 0.2}px`;
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
