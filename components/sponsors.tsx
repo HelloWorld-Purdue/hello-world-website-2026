@@ -1,60 +1,38 @@
 import React from "react";
-import FlowingMenu from "./ui/FlowingMenu";
 
-interface Sponsor {
-  text: string;
-  image: string;
-  link: string;
+const SPONSORS = [
+  "openai", "google", "nvidia", "tesla", "vercel",
+  "groq", "mistral", "elevenlabs", "langchain", "perplexity",
+  "codegen", "codeium", "cartesia", "chroma", "context",
+  "dain", "de-shaw", "delve", "ecopreneurship", "eigen-layer",
+  "elastic", "flutterflow", "hrt", "intersystems", "liquid",
+  "luma", "modal", "neo", "orbstack", "otsuka-valuenex",
+  "paradigm", "pear", "rox", "scrapybara", "taisu",
+  "terra", "vespa", "warp", "zoom",
+];
+
+export default function Sponsors() {
+  return (
+    <section id="sponsors" className="w-full py-24 px-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-white text-6xl font-bold mb-6">
+            Sponsors
+          </h2>
+          <div className="w-24 h-px bg-white/30 mx-auto"></div>
+        </div>
+
+        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-x-8 gap-y-8 items-center justify-items-center">
+          {SPONSORS.map((slug) => (
+            <img
+              key={slug}
+              src={`/sponsors/${slug}.png`}
+              alt={slug}
+              className="h-8 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity duration-200"
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
-
-interface SponsorsProps {
-  sponsors: Sponsor[];
-}
-
-export default function Sponsors ({ sponsors }: SponsorsProps) {
-    return (
-        <section id="sponsors" className="py-20 px-4">
-            <div style={{ height: '100px', position: 'relative' }}>
-                <FlowingMenu items={sponsors} />
-            </div>
-            {/* <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Our Sponsors
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"></div>
-            <p className="text-xl text-muted-foreground">Thank you to our sponsors for making this event happen!</p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {sponsors.map((sponsor) => (
-                <Card
-                key={sponsor.name}
-                className="hover:shadow-lg transition-shadow duration-300 border-2 border-border hover:border-primary/50"
-                >
-                <CardContent className="p-8 flex items-center justify-center">
-                    <div className="w-24 h-24 bg-gradient-to-br from-muted to-card rounded-lg flex items-center justify-center">
-                    <img
-                        src={sponsor.logo}
-                        alt={sponsor.name}
-                        className="w-full h-full object-contain"
-                    />
-                    </div>
-                </CardContent>
-                </Card>
-            ))}
-            </div>
-
-
-          <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-background to-muted rounded-2xl p-8 border border-border inline-block">
-              <p className="text-xl font-semibold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Special thanks section or any other note
-              </p>
-            </div>
-          </div>
-        </div> */}
-        </section>
-    );
-};
-
