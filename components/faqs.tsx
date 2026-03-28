@@ -6,13 +6,19 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+const FAQ_SECTION_MIN_HEIGHT = 1200;
+
 interface FaqsProps {
   faqs: Array<{ question: string; answer: string }>;
 }
 
 export default function Faqs ({ faqs }: FaqsProps) {
     return (
-        <section id="faqs" className="py-20 px-4">
+        <section
+            id="faqs"
+            className="py-20 px-4"
+            style={{ minHeight: FAQ_SECTION_MIN_HEIGHT }}
+        >
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-6xl font-bold mb-6 text-black">
