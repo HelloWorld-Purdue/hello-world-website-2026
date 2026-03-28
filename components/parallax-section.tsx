@@ -24,16 +24,16 @@ export default function ParallaxSection({ children }: { children: React.ReactNod
   return (
     <div
       ref={ref}
-      className="w-full"
+      className="relative w-full"
       style={{
-        backgroundImage: "url('/images/background.png')",
+        backgroundImage: "linear-gradient(180deg, rgba(7, 18, 13, 0.74), rgba(7, 18, 13, 0.82)), url('/images/background.png')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPositionX: "center",
         backgroundPositionY: "0px",
       }}
     >
-      {children}
+      <div className="relative z-10">{children}</div>
     </div>
   );
 }

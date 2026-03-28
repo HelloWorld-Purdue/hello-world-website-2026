@@ -15,7 +15,7 @@ export default function Faqs ({ faqs }: FaqsProps) {
         <section id="faqs" className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-6xl font-bold mb-6 text-black">
+                    <h2 className="text-6xl font-bold mb-6 text-foreground">
                         Frequently Asked Questions
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
@@ -30,6 +30,9 @@ export default function Faqs ({ faqs }: FaqsProps) {
                             sx={{
                                 backgroundColor: 'transparent',
                                 boxShadow: 'none',
+                                border: '1px solid var(--border)',
+                                borderRadius: '12px',
+                                marginBottom: '0.75rem',
                                 '&:before': { display: 'none' },
                             }}
                         >
@@ -37,8 +40,13 @@ export default function Faqs ({ faqs }: FaqsProps) {
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls={`panel${index}-content`}
                                 id={`panel${index}-header`}
+                                sx={{
+                                    '& .MuiSvgIcon-root': {
+                                        color: 'var(--primary)',
+                                    },
+                                }}
                             >
-                                <h3 className="text-xl font-semibold mb-4 text-[#000000]">
+                                <h3 className="text-xl font-semibold mb-2 text-foreground">
                                     {faq.question}
                                 </h3>
                             </AccordionSummary>
