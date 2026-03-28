@@ -14,26 +14,6 @@ export default function Footer({ sponsorLogoSrc = "/images/sfab.jpg", sponsorHre
     return (
         <footer className="py-12 px-4">
             <div className="max-w-6xl mx-auto text-center">
-                <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    HelloWorld
-                </h3>
-                <p className="text-muted-foreground mb-8">Building the future, one hack at a time.</p>
-
-                {/* Sponsor strip */}
-                <div className="mt-2 flex flex-col items-center gap-3">
-                    <span className="text-xs tracking-widest uppercase text-muted-foreground">Sponsored by Purdue's SFAB</span>
-                    <a href={sponsorHref} aria-label="SFAB" className="inline-flex items-center justify-center">
-                        <img
-                            src={sponsorLogoSrc}
-                            alt="SFAB logo"
-                            className="h-10 w-auto opacity-90 hover:opacity-100 transition-opacity"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                    </a>
-                    {/* subtle divider */}
-                    <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-border to-transparent" />
-                </div>
 
                 {/* Social links */}
                 <div className="mt-6 flex justify-center flex-wrap gap-8">
@@ -47,6 +27,9 @@ export default function Footer({ sponsorLogoSrc = "/images/sfab.jpg", sponsorHre
                         Discord
                     </a>
                 </div>
+            </div>
+            <div className="mt-6 text-muted-foreground text-center">
+                Made with ❤️ by the HelloWorld2026 team
             </div>
         </footer>
     );

@@ -91,7 +91,7 @@ export default function Schedule ({ scheduleData, openEventModal, Dialog, active
                                                     >
                                                         <div className="bg-background rounded-2xl p-4 shadow-lg border-2 border-transparent hover:border-primary/50 transition-all duration-200">
                                                             <div className="text-sm font-bold text-primary mb-2">{event.time}</div>
-                                                            <div className="text-sm font-semibold text-card-primary leading-tight">{event.title}</div>
+                                                            <div className="text-sm font-semibold text-card-foreground leading-tight">{event.title}</div>
                                                         </div>
                                                     </div>
 
@@ -111,13 +111,13 @@ export default function Schedule ({ scheduleData, openEventModal, Dialog, active
                                         <>
                                             <button
                                                 onClick={() => handleScroll(day, 'left')}
-                                                className="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-primary/80 hover:bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-opacity opacity-0 group-hover:opacity-100 disabled:opacity-0"
+                                                className="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-primary/80 hover:bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-opacity opacity-0 group-hover:opacity-100 disabled:opacity-0"
                                             >
                                                 &#x25C0; {/* Left Arrow */}
                                             </button>
                                             <button
                                                 onClick={() => handleScroll(day, 'right')}
-                                                className="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-primary/80 hover:bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-opacity opacity-0 group-hover:opacity-100 disabled:opacity-0"
+                                                className="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-primary/80 hover:bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-opacity opacity-0 group-hover:opacity-100 disabled:opacity-0"
                                             >
                                                 &#x25B6; {/* Right Arrow */}
                                             </button>

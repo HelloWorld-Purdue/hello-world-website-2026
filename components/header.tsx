@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-white/80 backdrop-blur-md dark:bg-black/80">
+        <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
             <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
                 <Link
                     href="/"
-                    className="text-xl font-bold tracking-tight text-gray-900 dark:text-white hover:opacity-80 transition-opacity"
+                    className="text-xl font-bold tracking-tight text-foreground hover:opacity-80 transition-opacity"
                 >
                     Hello World
                 </Link>
@@ -22,7 +22,7 @@ export default function Header() {
                         <li key={label}>
                             <Link
                                 href={href}
-                                className="rounded-md px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted/70 hover:text-foreground"
                             >
                                 {label}
                             </Link>
@@ -31,7 +31,7 @@ export default function Header() {
                     <li className="ml-3">
                         <Link
                             href="https://tally.so/r/eqLOPo"
-                            className="rounded-full bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gray-700 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-200"
+                            className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-secondary"
                         >
                             Apply
                         </Link>
