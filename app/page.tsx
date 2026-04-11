@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import Hero from "../components/hero";
 import Header from "@/components/header";
 import ParallaxSection from "@/components/parallax-section";
+import Reveal from "@/components/reveal";
 
 
 export default function Home() {
@@ -15,13 +16,14 @@ export default function Home() {
         <Header />
         <Hero />
         <ParallaxSection>
-          <About />
-          <Faqs faqs={faqs} />
-          <Sponsors />
-
-          <div className="footer">
-            <Footer />
-          </div>
+          <Reveal><About /></Reveal>
+          <Reveal><Faqs faqs={faqs} /></Reveal>
+          <Reveal><Sponsors /></Reveal>
+          <Reveal>
+            <div className="footer">
+              <Footer />
+            </div>
+          </Reveal>
         </ParallaxSection>
       </main>
     </div>
