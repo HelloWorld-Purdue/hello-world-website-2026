@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
+        //change rgba for opacity
+        <header className="fixed top-0 z-50 w-full [background:linear-gradient(to_bottom,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_100%)]">
             <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
                 <Link
                     href="/"
