@@ -8,7 +8,7 @@ export default function Header() {
             <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
                 <Link
                     href="/"
-                    className="text-xl font-bold tracking-tight text-foreground hover:opacity-80 transition-opacity"
+                    className="text-3xl font-bold tracking-tight text-foreground hover:opacity-80 transition-opacity"
                 >
                     Hello World
                 </Link>
@@ -23,7 +23,7 @@ export default function Header() {
                         <li key={label}>
                             <Link
                                 href={href}
-                                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted/70 hover:text-foreground"
+                                className="rounded-md px-4 py-3 text-lg font-medium text-muted-foreground transition-colors hover:bg-muted/70 hover:text-foreground"
                             >
                                 {label}
                             </Link>
@@ -34,7 +34,7 @@ export default function Header() {
                             href="https://tally.so/r/eqLOPo"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-secondary"
+                            className="rounded-full bg-primary px-4 py-2 text-base font-semibold text-primary-foreground transition-colors hover:bg-secondary"
                         >
                             Apply
                         </Link>
