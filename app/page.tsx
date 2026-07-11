@@ -2,6 +2,7 @@ import About from "../components/about";
 import faqs from "../components/data/faqs.json";
 import Faqs from "../components/faqs";
 import Sponsors from "../components/sponsors";
+import Tracks from "../components/tracks";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
 import Header from "@/components/header";
@@ -17,8 +18,9 @@ export default function Home() {
         <Hero />
         <ParallaxSection>
           <Reveal><About /></Reveal>
-          <Reveal><Faqs faqs={faqs} /></Reveal>
+          <Reveal><Tracks /></Reveal>
           <Reveal><Sponsors /></Reveal>
+          <Reveal><Faqs faqs={faqs} /></Reveal>
           <Reveal>
             <div className="footer">
               <Footer />
