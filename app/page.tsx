@@ -11,7 +11,7 @@ import Reveal from "@/components/reveal";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans">
+    <div className="flex min-h-screen items-center justify-center font-serif">
       <main className="flex min-h-screen w-full flex-col items-center">
         <Header />
         <Hero />
