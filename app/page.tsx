@@ -3,6 +3,7 @@ import faqs from "../components/data/faqs.json";
 import Faqs from "../components/faqs";
 import Sponsors from "../components/sponsors";
 import Tracks from "../components/tracks";
+import Apply from "../components/apply";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
 import Header from "@/components/header";
@@ -21,6 +22,7 @@ export default function Home() {
           <Reveal><Tracks /></Reveal>
           <Reveal><Sponsors /></Reveal>
           <Reveal><Faqs faqs={faqs} /></Reveal>
+          <Reveal><Apply /></Reveal>
           <Reveal>
             <div className="footer">
               <Footer />

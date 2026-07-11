@@ -32,6 +32,8 @@ export default function Header() {
                     <li className="ml-3">
                         <Link
                             href="https://tally.so/r/eqLOPo"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-secondary"
                         >
                             Apply
