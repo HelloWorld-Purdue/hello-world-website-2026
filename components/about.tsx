@@ -1,10 +1,11 @@
 import React from "react";
 
 const stats = [
-  { value: "500+", label: "Hackers" },
-  { value: "$2,500", label: "In Prizes" },
+  { value: "800+", label: "Expected Hackers" },
   { value: "24", label: "Hours" },
+  // { value: "650+", label: "Last Year" },
   { value: "20+", label: "Mentors" },
+  { value: "410", label: "Projects Built" },
 ];
 
 const About = () => {
@@ -42,16 +43,18 @@ const About = () => {
         <div className="mt-16 grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
             <p className="font-serif text-2xl italic leading-snug text-foreground/90 sm:text-3xl">
-              &ldquo;A 24-hour coding marathon where ideas take their first breath.&rdquo;
+              &ldquo;Every technical career has a starting point. Students enter a new world and leave as builders.&rdquo;
             </p>
           </div>
           <div className="lg:col-span-7 lg:border-l lg:border-foreground/10 lg:pl-14">
             <p className="font-serif text-lg leading-relaxed text-foreground/70">
-              Welcome to HelloWorld &mdash; built for the newcomer, the first-timer, the
-              just-curious. Our mission is to empower students at the very start of their
-              journey in tech. This is a level playing field: a place to learn, to
-              experiment, and to bring a first big idea to life, surrounded by mentors
-              who remember what it felt like to write line one.
+              Welcome to Hello World 2026, built for the newcomer, the first-timer, the
+              just-curious. Our mission is to lower the barrier to entry into tech. Many of our
+              hackers are strong technical students who have never attended a hackathon before.
+              This is a level playing field: a place to learn through hands-on workshops, connect
+              with industry professionals, and bring a first big idea to life. Last year we
+              welcomed over 650 students. By the end of the weekend, 410 of them had built
+              and demoed their very first project.
             </p>
           </div>
         </div>
