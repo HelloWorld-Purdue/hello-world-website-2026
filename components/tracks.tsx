@@ -59,8 +59,8 @@ export default function Tracks() {
 
               {/* icon + title */}
               <div className="lg:col-span-4">
-                <Icon className="h-8 w-8 text-foreground/80 transition-all duration-500 group-hover:translate-x-2 group-hover:text-primary" />
-                <h3 className="mt-5 font-serif text-3xl font-light leading-[0.95] tracking-tight text-foreground transition-transform duration-500 group-hover:translate-x-2 sm:text-4xl lg:text-5xl">
+                <Icon className="h-8 w-8 text-foreground/80 transition-all duration-500 group-hover:text-primary" />
+                <h3 className="mt-5 font-serif text-3xl font-light leading-[0.95] tracking-tight text-foreground transition-transform duration-500 sm:text-4xl lg:text-5xl">
                   {track.title}
                 </h3>
               </div>
