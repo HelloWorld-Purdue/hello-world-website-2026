@@ -1,15 +1,5 @@
 import React from "react";
 
-/**
- * Footer component with a sponsor strip.
- *
- * Props:
- * - sponsorLogoSrc: string — path/URL to the SFAB logo image
- * - sponsorHref: string — optional link to SFAB site (defaults to '#')
- *
- * Usage:
- * <Footer sponsorLogoSrc="/images/sfab-logo.svg" sponsorHref="https://example.com" />
- */
 export default function Footer({ sponsorLogoSrc = "/images/sfab.jpg", sponsorHref = "#" }) {
     return (
         <footer className="py-12 px-4">
