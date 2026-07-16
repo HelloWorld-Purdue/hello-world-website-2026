@@ -2,12 +2,39 @@ import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-export default function Schedule ({ scheduleData, openEventModal, Dialog, activeModal, closeModal, DialogContent, DialogHeader, DialogTitle, selectedEvent, Clock, MapPin, Calendar, User }) {
+type ScheduleEvent = {
+    time: string;
+    title: string;
+    location: string;
+    duration: string;
+    speaker: string;
+    description: string;
+};
+
+type ScheduleData = Record<string, ScheduleEvent[]>;
+
+type ScheduleProps = {
+    scheduleData: ScheduleData;
+    openEventModal: (event: ScheduleEvent) => void;
+    Dialog: React.ComponentType<{ open: boolean; onOpenChange: (open: boolean) => void; children: React.ReactNode }>;
+    activeModal: string | null;
+    closeModal: (open: boolean) => void;
+    DialogContent: React.ComponentType<{ className?: string; children: React.ReactNode }>;
+    DialogHeader: React.ComponentType<{ children: React.ReactNode }>;
+    DialogTitle: React.ComponentType<{ className?: string; children: React.ReactNode }>;
+    selectedEvent: ScheduleEvent | null;
+    Clock: React.ComponentType<{ className?: string }>;
+    MapPin: React.ComponentType<{ className?: string }>;
+    Calendar: React.ComponentType<{ className?: string }>;
+    User: React.ComponentType<{ className?: string }>;
+};
+
+export default function Schedule ({ scheduleData, openEventModal, Dialog, activeModal, closeModal, DialogContent, DialogHeader, DialogTitle, selectedEvent, Clock, MapPin, Calendar, User }: ScheduleProps) {
     // State to track which timelines are overflowing
-    const [overflowState, setOverflowState] = useState({});
+    const [overflowState, setOverflowState] = useState<Record<string, boolean>>({});
 
     // A ref to hold the DOM elements of the scrollable timelines
-    const scrollRefs = useRef({});
+    const scrollRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
     // Register the GSAP plugin once when the component mounts
     useEffect(() => {
@@ -17,7 +44,7 @@ export default function Schedule ({ scheduleData, openEventModal, Dialog, active
     // This effect checks for overflow whenever the data or window size changes
     useEffect(() => {
         const checkOverflow = () => {
-            const newOverflows = {};
+            const newOverflows: Record<string, boolean> = {};
             for (const day in scrollRefs.current) {
                 const element = scrollRefs.current[day];
                 if (element) {
@@ -39,7 +66,7 @@ export default function Schedule ({ scheduleData, openEventModal, Dialog, active
     }, [scheduleData]); // Rerun effect if scheduleData changes
 
     // GSAP-powered scroll handler function
-    const handleScroll = (day, direction) => {
+    const handleScroll = (day: string, direction: 'left' | 'right') => {
         const scrollAmount = 500; // The amount of pixels to scroll
         const timeline = scrollRefs.current[day];
 
@@ -75,7 +102,7 @@ export default function Schedule ({ scheduleData, openEventModal, Dialog, active
 
                                 <div className="relative group">
                                     <div
-                                        ref={(el) => (scrollRefs.current[day] = el)}
+                                        ref={(el) => { scrollRefs.current[day] = el; }}
                                         className="relative overflow-x-auto py-12 -my-8 px-4"
                                     >
                                         <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full transform -translate-y-1/2 min-w-[800px]"></div>
