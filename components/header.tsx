@@ -68,7 +68,7 @@ export default function Header() {
                     ))}
                     <li className="ml-2">
                         <Link
-                            href="https://tally.so/r/eqLOPo"
+                            href="https://tally.so/r/81gKBY"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative font-mono text-[11px] uppercase tracking-[0.3em] text-primary transition-colors duration-300 hover:text-foreground"
