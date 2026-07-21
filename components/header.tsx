@@ -67,15 +67,14 @@ export default function Header() {
                             </Link>
                         </li>
                     ))}
-                    <li className="ml-2">
+                    <li>
                         <Link
                             href={APPLY_FORM_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative font-mono text-[11px] uppercase tracking-[0.3em] text-primary transition-colors duration-300 hover:text-foreground"
+                            className="rounded-full border border-primary/60 px-5 py-2 font-mono text-[11px] uppercase tracking-[0.25em] text-primary transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground"
                         >
                             Apply
-                            <span className="absolute -bottom-1 left-0 h-px w-full bg-primary transition-all duration-500 group-hover:w-0" />
                         </Link>
                     </li>
                 </ul>
