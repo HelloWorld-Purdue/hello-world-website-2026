@@ -1,10 +1,22 @@
-import React from 'react';
+import Header from "@/components/header";
+import Schedule from "@/components/schedule";
+import Footer from "@/components/footer";
+import Reveal from "@/components/reveal";
 
-export default function Schedule() {
+export default function SchedulePage() {
   return (
-    <div>
-      <h1>Schedule Page</h1>
-      <p>This is a placeholder for the Schedule page.</p>
+    <div className="flex min-h-screen items-center justify-center font-serif">
+      <main className="flex min-h-screen w-full flex-col items-center">
+        <Header />
+        <Reveal>
+          <Schedule />
+        </Reveal>
+        <Reveal>
+          <div className="footer">
+            <Footer />
+          </div>
+        </Reveal>
+      </main>
     </div>
   );
 }

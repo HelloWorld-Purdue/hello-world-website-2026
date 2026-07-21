@@ -50,10 +50,10 @@ export default function Header() {
                 </Link>
                 <ul className="flex items-center gap-6 sm:gap-8">
                     {[
-                        { label: "About", href: "#about" },
-                        { label: "Tracks", href: "#tracks" },
-                        { label: "Sponsors", href: "#sponsors" },
-                        { label: "FAQs", href: "#faqs" },
+                        { label: "About", href: "/#about" },
+                        { label: "Tracks", href: "/#tracks" },
+                        { label: "Sponsors", href: "/#sponsors" },
+                        { label: "FAQs", href: "/#faqs" },
                         { label: "Schedule", href: "/schedule" },
                     ].map(({ label, href }) => (
                         <li key={label} className="group">
