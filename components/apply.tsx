@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { APPLY_FORM_URL } from "@/lib/constants";
 
 const Apply = () => {
   return (
@@ -15,7 +15,7 @@ const Apply = () => {
           Applications take under five minutes. No experience required.
         </p>
         <a
-          href="https://tally.so/r/eqLOPo"
+          href={APPLY_FORM_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="group mt-10 inline-flex items-center gap-3 rounded-full bg-primary px-8 py-4 font-serif text-lg font-medium tracking-tight text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-[0_0_40px_-8px_rgba(116,255,167,0.45)]"
