@@ -55,7 +55,6 @@ export default function Header() {
                         { label: "Tracks", href: "/#tracks" },
                         { label: "Sponsors", href: "/#sponsors" },
                         { label: "FAQs", href: "/#faqs" },
-                        { label: "Schedule", href: "/schedule" },
                     ].map(({ label, href }) => (
                         <li key={label} className="group">
                             <Link

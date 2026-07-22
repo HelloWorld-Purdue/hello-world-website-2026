@@ -1,1 +1,5 @@
-export { default } from "../schedule";
+import { notFound } from "next/navigation";
+
+export default function SchedulePage() {
+  notFound();
+}
