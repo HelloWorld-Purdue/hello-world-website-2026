@@ -13,7 +13,7 @@ export default function Footer({ sponsorLogoSrc = "/images/sfab.jpg", sponsorHre
                     >
                         Instagram
                     </a>
-                    <a href="https://discord.gg/HRqTg8z2" className="text-muted-foreground hover:text-primary transition-colors">
+                    <a href="https://discord.gg/UChhKvpbt" className="text-muted-foreground hover:text-primary transition-colors">
                         Discord
                     </a>
                 </div>

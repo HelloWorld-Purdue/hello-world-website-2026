@@ -232,7 +232,7 @@ export default function Schedule() {
         <p className="mt-14 max-w-2xl font-serif text-lg leading-relaxed text-foreground/60">
           Everything live — announcements, room changes, last-minute workshops — goes out in our{" "}
           <a
-            href="https://discord.gg/HRqTg8z2"
+            href="https://discord.gg/UChhKvpbt"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary underline-offset-4 transition-colors duration-300 hover:underline"

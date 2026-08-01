@@ -1,11 +1,11 @@
 import React from "react";
 
 const stats = [
-  { value: "800+", label: "Expected Hackers" },
+  { value: "400+", label: "Expected Hackers" },
   { value: "24", label: "Hours" },
   // { value: "650+", label: "Last Year" },
   { value: "20+", label: "Mentors" },
-  { value: "410", label: "Projects Built" },
+  { value: "150", label: "Projects Built" },
 ];
 
 const About = () => {
@@ -53,7 +53,7 @@ const About = () => {
               hackers are strong technical students who have never attended a hackathon before.
               This is a level playing field: a place to learn through hands-on workshops, connect
               with industry professionals, and bring a first big idea to life. Last year we
-              welcomed over 650 students. By the end of the weekend, 410 of them had built
+              welcomed over 650 students. By the end of the weekend, they had built
               and demoed their very first project.
             </p>
           </div>
