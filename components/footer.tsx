@@ -28,7 +28,7 @@ export default function Footer({ sponsorLogoSrc = "/images/sfab.jpg", sponsorHre
                         </svg>
                     </a>
                     <a
-                        href="https://discord.gg/UChhKvpbt"
+                        href="https://discord.gg/ezmNSKXsfz"
                         className="text-muted-foreground hover:text-primary transition-colors"
                         aria-label="Discord"
                     >
