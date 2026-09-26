@@ -19,8 +19,8 @@ export default function Home() {
         <Hero />
         <ParallaxSection>
           <Reveal><About /></Reveal>
-          <Reveal><Tracks /></Reveal>
-          <Reveal><Sponsors /></Reveal>
+          {/* <Reveal><Tracks /></Reveal>
+          <Reveal><Sponsors /></Reveal> */}
           <Reveal><Faqs faqs={faqs} /></Reveal>
           <Reveal><Apply /></Reveal>
           <Reveal>
