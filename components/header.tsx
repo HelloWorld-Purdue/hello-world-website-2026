@@ -45,9 +45,13 @@ export default function Header() {
             <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 sm:px-6 lg:px-10">
                 <Link
                     href="/"
-                    className="font-serif text-2xl font-medium tracking-tight text-foreground transition-colors duration-300 hover:text-primary sm:text-3xl"
+                    className="transition-opacity duration-300 hover:opacity-80"
                 >
-                    Hello<span className="text-primary">World</span>
+                    <img
+                        src="/images/logo-horizontal.png"
+                        alt="HelloWorld logo"
+                        className="w-32 h-auto object-contain sm:w-40"
+                    />
                 </Link>
                 <ul className="flex items-center gap-6 sm:gap-8">
                     {[
