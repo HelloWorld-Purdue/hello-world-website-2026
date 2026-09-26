@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import { Cormorant, Geist, Geist_Mono } from "next/font/google";
+import { Press_Start_2P, VT323, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
-const cormorant = Cormorant({
-  variable: "--font-cormorant",
+const pressStart = Press_Start_2P({
+  variable: "--font-pixel",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: "400",
+});
+
+const vt323 = VT323({
+  variable: "--font-terminal",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} antialiased`}
+        className={`${geistMono.variable} ${pressStart.variable} ${vt323.variable} antialiased`}
       >
         {children}
       </body>

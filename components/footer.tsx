@@ -43,7 +43,7 @@ export default function Footer({ sponsorLogoSrc = "/images/sfab.jpg", sponsorHre
                     </a>
                 </div>
             </div>
-            <div className="mt-6 text-muted-foreground text-center">
+            <div className="mt-6 font-sans text-2xl text-muted-foreground text-center">
                 Made with ❤️ by the HelloWorld2026 team
             </div>
         </footer>

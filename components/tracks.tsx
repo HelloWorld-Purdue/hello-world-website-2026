@@ -34,40 +34,40 @@ export default function Tracks() {
       <div className="relative mx-auto max-w-6xl">
         {/* asymmetric display heading */}
         <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-10">
-          <h2 className="font-serif text-5xl font-light leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:col-span-9 lg:text-7xl">
+          <h2 className="font-serif text-2xl leading-[1.4] tracking-tight text-foreground pixel-text sm:text-3xl lg:col-span-9 lg:text-4xl">
             Four tracks,
             <br />
-            <span className="italic font-medium text-primary">one weekend</span>{" "}
+            <span className="text-primary">one weekend</span>{" "}
             to build.
           </h2>
-          <p className="flex items-end font-serif text-base leading-relaxed text-foreground/60 lg:col-span-3 lg:pb-2">
+          <p className="flex items-end font-sans text-xl leading-relaxed text-foreground/60 lg:col-span-3 lg:pb-2">
             Pick a direction, form a team, and spend 24 hours prototyping something that matters.
           </p>
         </div>
 
-        {/* hairline-ruled track list */}
-        <div className="mt-16 border-t border-foreground/15">
+        {/* chunky-ruled track list */}
+        <div className="mt-16 border-t-2 border-foreground/20">
           {TRACKS.map((track) => {
             const Icon = track.icon;
             return (
             <div
               key={track.title}
-              className="group relative grid gap-6 border-b border-foreground/15 px-4 py-8 transition-colors duration-500 hover:bg-foreground/[0.04] sm:px-8 sm:py-10 lg:grid-cols-12 lg:gap-10 lg:py-12"
+              className="group relative grid gap-6 border-b-2 border-foreground/20 px-4 py-8 transition-colors duration-500 hover:bg-foreground/[0.04] sm:px-8 sm:py-10 lg:grid-cols-12 lg:gap-10 lg:py-12"
             >
               {/* accent tick that grows on hover */}
-              <span className="absolute top-0 left-0 h-px w-0 bg-primary transition-all duration-700 group-hover:w-full" />
+              <span className="absolute top-0 left-0 h-1 w-0 bg-primary transition-all duration-700 group-hover:w-full" />
 
               {/* icon + title */}
               <div className="lg:col-span-4">
-                <Icon className="h-8 w-8 text-foreground/80 transition-all duration-500 group-hover:text-primary" />
-                <h3 className="mt-5 font-serif text-3xl font-light leading-[0.95] tracking-tight text-foreground transition-transform duration-500 sm:text-4xl lg:text-5xl">
+                <Icon className="h-9 w-9 text-foreground/80 transition-all duration-500 group-hover:text-primary" strokeWidth={2.5} />
+                <h3 className="mt-5 font-serif text-lg leading-[1.4] tracking-tight text-foreground transition-transform duration-500 sm:text-xl lg:text-2xl">
                   {track.title}
                 </h3>
               </div>
 
               {/* description */}
               <div className="lg:col-span-7 lg:col-start-6">
-                <p className="font-serif text-lg leading-relaxed text-foreground/70 transition-colors duration-300 group-hover:text-foreground/85 sm:text-xl">
+                <p className="font-sans text-2xl leading-relaxed text-foreground/70 transition-colors duration-300 group-hover:text-foreground/85">
                   {track.description}
                 </p>
               </div>

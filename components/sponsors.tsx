@@ -17,26 +17,26 @@ export default function Sponsors() {
       <div className="relative mx-auto max-w-6xl">
         {/* asymmetric display heading */}
         <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-10">
-          <h2 className="font-serif text-5xl font-light leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:col-span-9 lg:text-7xl">
+          <h2 className="font-serif text-2xl leading-[1.4] tracking-tight text-foreground pixel-text sm:text-3xl lg:col-span-9 lg:text-4xl">
             Built with our{" "}
-            <span className="italic font-medium text-primary">sponsors</span>.
+            <span className="text-primary">sponsors</span>.
           </h2>
-          <p className="flex items-end font-serif text-base leading-relaxed text-foreground/60 lg:col-span-3 lg:pb-2">
+          <p className="flex items-end font-sans text-xl leading-relaxed text-foreground/60 lg:col-span-3 lg:pb-2">
             Free for every hacker, thanks to the companies backing this event.
           </p>
         </div>
 
-        {/* hairline-ruled sponsor grid */}
-        <div className="mt-16 grid grid-cols-3 border-t border-l border-foreground/15 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
+        {/* chunky-ruled sponsor grid */}
+        <div className="mt-16 grid grid-cols-3 border-t-2 border-l-2 border-foreground/20 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
           {SPONSORS.map((slug) => (
             <div
               key={slug}
-              className="group flex items-center justify-center border-b border-r border-foreground/15 p-8 transition-colors duration-300 hover:bg-foreground/[0.04]"
+              className="group flex items-center justify-center border-b-2 border-r-2 border-foreground/20 p-8 transition-colors duration-300 hover:bg-foreground/[0.04]"
             >
               <img
                 src={`/sponsors/${slug}.png`}
                 alt={slug}
-                className="h-7 w-auto object-contain brightness-0 invert opacity-70 transition-all duration-300 group-hover:opacity-100 group-hover:drop-shadow-[0_0_10px_rgba(116,255,167,0.28)]"
+                className="h-7 w-auto object-contain brightness-0 invert opacity-70 transition-all duration-300 group-hover:opacity-100 group-hover:drop-shadow-[0_0_10px_rgba(217,255,143,0.4)]"
               />
             </div>
           ))}

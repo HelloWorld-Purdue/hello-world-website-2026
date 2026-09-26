@@ -26,14 +26,14 @@ export default function ParallaxSection({ children }: { children: React.ReactNod
       ref={ref}
       className="relative w-full"
       style={{
-        backgroundImage: "linear-gradient(180deg, rgba(7, 18, 13, 0.74), rgba(7, 18, 13, 0.82)), url('/images/background.png')",
+        backgroundImage: "linear-gradient(180deg, rgba(6, 16, 20, 0.82), rgba(6, 16, 20, 0.88)), url('/images/background.png')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPositionX: "center",
         backgroundPositionY: "0px",
       }}
     >
-      <div className="relative z-10">{children}</div>
+      <div className="scanlines relative z-10">{children}</div>
     </div>
   );
 }

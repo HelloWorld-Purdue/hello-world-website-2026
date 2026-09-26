@@ -138,7 +138,7 @@ export default function Schedule() {
     <section id="schedule" className="relative px-6 py-28 sm:px-10 lg:px-16">
       <div className="relative mx-auto max-w-6xl">
         {/* day switcher */}
-        <div className="mt-12 flex items-center gap-8 border-b border-foreground/15">
+        <div className="mt-12 flex items-center gap-8 border-b-2 border-foreground/20">
           {SCHEDULE.map((d, i) => {
             const isActive = i === activeDay;
             return (
@@ -156,8 +156,8 @@ export default function Schedule() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span
-                  className={`font-serif text-2xl font-light tracking-tight transition-colors duration-300 sm:text-3xl ${
-                    isActive ? "text-foreground" : "text-foreground/40 group-hover:text-foreground/70"
+                  className={`font-serif text-lg tracking-tight transition-colors duration-300 sm:text-xl ${
+                    isActive ? "text-primary" : "text-foreground/40 group-hover:text-foreground/70"
                   }`}
                 >
                   {d.label}
@@ -171,7 +171,7 @@ export default function Schedule() {
                 </span>
                 {/* active underline */}
                 <span
-                  className={`absolute -bottom-px left-0 h-px bg-primary transition-all duration-500 ${
+                  className={`absolute -bottom-0.5 left-0 h-1 bg-primary transition-all duration-500 ${
                     isActive ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
@@ -185,10 +185,10 @@ export default function Schedule() {
           {day.events.map((event, i) => (
             <li
               key={`${day.label}-${i}`}
-              className="group relative grid gap-4 border-b border-foreground/15 px-2 py-8 transition-colors duration-500 hover:bg-foreground/[0.04] sm:px-4 lg:grid-cols-12 lg:gap-10"
+              className="group relative grid gap-4 border-b-2 border-foreground/20 px-2 py-8 transition-colors duration-500 hover:bg-foreground/[0.04] sm:px-4 lg:grid-cols-12 lg:gap-10"
             >
               {/* accent tick that grows on hover */}
-              <span className="absolute top-0 left-0 h-px w-0 bg-primary transition-all duration-700 group-hover:w-full" />
+              <span className="absolute top-0 left-0 h-1 w-0 bg-primary transition-all duration-700 group-hover:w-full" />
 
               {/* time */}
               <div className="lg:col-span-3">
@@ -203,7 +203,7 @@ export default function Schedule() {
 
               {/* details */}
               <div className="lg:col-span-9">
-                <h3 className="font-serif text-2xl font-light leading-tight tracking-tight text-foreground sm:text-3xl">
+                <h3 className="font-serif text-base leading-snug tracking-tight text-foreground sm:text-lg">
                   {event.title}
                 </h3>
                 <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/50">
@@ -219,7 +219,7 @@ export default function Schedule() {
                   )}
                 </div>
                 {event.description && (
-                  <p className="mt-4 max-w-2xl font-serif text-lg leading-relaxed text-foreground/70 transition-colors duration-300 group-hover:text-foreground/85">
+                  <p className="mt-4 max-w-2xl font-sans text-2xl leading-relaxed text-foreground/70 transition-colors duration-300 group-hover:text-foreground/85">
                     {event.description}
                   </p>
                 )}
@@ -229,7 +229,7 @@ export default function Schedule() {
         </ol>
 
         {/* discord note */}
-        <p className="mt-14 max-w-2xl font-serif text-lg leading-relaxed text-foreground/60">
+        <p className="mt-14 max-w-2xl font-sans text-2xl leading-relaxed text-foreground/60">
           Everything live — announcements, room changes, last-minute workshops — goes out in our{" "}
           <a
             href="https://discord.gg/ezmNSKXsfz"

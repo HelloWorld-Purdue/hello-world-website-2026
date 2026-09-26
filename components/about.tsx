@@ -24,10 +24,10 @@ const About = () => {
       <div className="relative mx-auto max-w-6xl">
         {/* asymmetric display heading */}
         <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-10">
-          <h2 className="font-serif text-5xl font-light leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:col-span-9 lg:text-7xl">
+          <h2 className="font-serif text-2xl leading-[1.4] tracking-tight text-foreground pixel-text sm:text-3xl lg:col-span-9 lg:text-4xl">
             The Midwest&apos;s largest
             <br />
-            <span className="italic font-medium text-primary">beginner-friendly</span>{" "}
+            <span className="text-primary">beginner-friendly</span>{" "}
             hackathon.
           </h2>
           <div className="flex items-end justify-end lg:col-span-3 lg:pb-2">
@@ -42,12 +42,12 @@ const About = () => {
         {/* pull-quote + body, split by a hairline */}
         <div className="mt-16 grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-5">
-            <p className="font-serif text-2xl italic leading-snug text-foreground/90 sm:text-3xl">
-              &ldquo;Every technical career has a starting point. Students enter a new world and leave as builders.&rdquo;
+            <p className="font-mono text-xl leading-relaxed text-foreground/90 sm:text-2xl">
+              &quot;Every technical career has a starting point. Students enter a new world and leave as builders.&quot;
             </p>
           </div>
-          <div className="lg:col-span-7 lg:border-l lg:border-foreground/10 lg:pl-14">
-            <p className="font-serif text-lg leading-relaxed text-foreground/70">
+          <div className="lg:col-span-7 lg:border-l-2 lg:border-foreground/15 lg:pl-14">
+            <p className="font-sans text-2xl leading-relaxed text-foreground/75">
               Welcome to Hello World 2026, built for the newcomer, the first-timer, the
               just-curious. Our mission is to lower the barrier to entry into tech. Many of our
               hackers are strong technical students who have never attended a hackathon before.
@@ -59,24 +59,22 @@ const About = () => {
           </div>
         </div>
 
-        {/* stat strip — masthead hairlines via gap-px trick */}
-        <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden border-y border-foreground/15 bg-foreground/20 sm:grid-cols-4">
+        {/* stat strip — chunky game-UI panels */}
+        <div className="mt-20 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
           {stats.map((s, i) => (
             <div
               key={s.label}
-              className="group relative flex flex-col gap-3 bg-background/40 backdrop-blur-sm px-6 py-8 transition-colors duration-300 hover:bg-foreground/[0.04] sm:px-8 sm:py-10"
+              className="group relative flex flex-col gap-3 border-2 border-foreground/20 bg-background/70 backdrop-blur-sm px-6 py-8 pixel-shadow-sm transition-colors duration-300 hover:border-primary sm:px-8 sm:py-10"
             >
               <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="font-serif text-5xl font-light leading-none text-foreground transition-transform duration-300 group-hover:-translate-y-0.5 sm:text-6xl">
+              <span className="font-serif text-2xl leading-none text-primary transition-transform duration-300 group-hover:-translate-y-1 sm:text-3xl">
                 {s.value}
               </span>
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-foreground/60">
                 {s.label}
               </span>
-              {/* accent tick that grows on hover */}
-              <span className="absolute bottom-0 left-0 h-px w-0 bg-primary transition-all duration-500 group-hover:w-full" />
             </div>
           ))}
         </div>

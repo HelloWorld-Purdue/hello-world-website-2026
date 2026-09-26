@@ -38,7 +38,7 @@ export default function Header() {
     return (
         //change rgba for opacity
         <header
-            className={`fixed top-0 z-50 w-full [background:linear-gradient(to_bottom,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0)_100%)] transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+            className={`fixed top-0 z-50 w-full [background:linear-gradient(to_bottom,rgba(4,12,14,0.9)_0%,rgba(4,12,14,0)_100%)] transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
                 visible ? "translate-y-0" : "-translate-y-full"
             }`}
         >
@@ -75,7 +75,7 @@ export default function Header() {
                             href={APPLY_FORM_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="rounded-full border border-primary/60 px-5 py-2 font-mono text-[11px] uppercase tracking-[0.25em] text-primary transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                            className="rounded-none border-2 border-primary/60 px-5 py-2 font-mono text-[11px] uppercase tracking-[0.25em] text-primary transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground"
                         >
                             Apply
                         </Link>
