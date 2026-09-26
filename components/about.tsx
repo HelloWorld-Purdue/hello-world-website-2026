@@ -30,11 +30,11 @@ const About = () => {
             <span className="text-primary">beginner-friendly</span>{" "}
             hackathon.
           </h2>
-          <div className="flex items-end justify-end lg:col-span-3 lg:pb-2">
+          <div className="flex items-end justify-end sm:justify-center lg:col-span-3 lg:pb-2">
             <img
               src="/images/logo.png"
               alt="HelloWorld logo"
-              className="w-32 h-auto object-contain opacity-90 sm:w-40"
+              className="w-full h-auto"
             />
           </div>
         </div>
