@@ -63,10 +63,10 @@ export default function Header() {
                         <li key={label} className="group">
                             <Link
                                 href={href}
-                                className="relative font-mono text-[11px] uppercase tracking-[0.25em] text-foreground/70 transition-colors duration-300 hover:text-foreground"
+                                className="relative font-mono text-xs font-bold uppercase tracking-[0.25em] text-foreground pixel-text-sm transition-colors duration-300 hover:text-primary"
                             >
                                 {label}
-                                <span className="absolute -bottom-1 left-1/2 h-px w-full -translate-x-1/2 scale-x-0 bg-primary transition-transform duration-500 group-hover:scale-x-100" />
+                                <span className="absolute -bottom-1 left-1/2 h-0.5 w-full -translate-x-1/2 scale-x-0 bg-primary transition-transform duration-500 group-hover:scale-x-100" />
                             </Link>
                         </li>
                     ))}
@@ -75,7 +75,7 @@ export default function Header() {
                             href={APPLY_FORM_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="rounded-none border-2 border-primary/60 px-5 py-2 font-mono text-[11px] uppercase tracking-[0.25em] text-primary transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                            className="rounded-none border-2 border-primary/60 px-5 py-2 font-mono text-xs font-bold uppercase tracking-[0.25em] text-primary pixel-shadow-sm transition-colors duration-300 hover:border-primary hover:bg-primary hover:text-primary-foreground"
                         >
                             Apply
                         </Link>
