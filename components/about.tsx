@@ -10,7 +10,7 @@ const stats = [
 
 const About = () => {
   return (
-    <section id="about" className="relative px-6 py-28 sm:px-10 lg:px-16">
+    <section id="about" className="relative px-4 py-16 sm:px-10 sm:py-28 lg:px-16">
       {/* faint grain wash for depth */}
       <div
         aria-hidden
@@ -24,17 +24,17 @@ const About = () => {
       <div className="relative mx-auto max-w-6xl">
         {/* asymmetric display heading */}
         <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-10">
-          <h2 className="font-serif text-2xl leading-[1.4] tracking-tight text-foreground pixel-text sm:text-3xl lg:col-span-9 lg:text-4xl">
+          <h2 className="font-serif text-xl leading-[1.5] tracking-tight text-foreground pixel-text sm:text-3xl sm:leading-[1.4] lg:col-span-9 lg:text-4xl">
             The Midwest&apos;s largest
             <br />
             <span className="text-primary">beginner-friendly</span>{" "}
             hackathon.
           </h2>
-          <div className="flex items-end justify-end sm:justify-center lg:col-span-3 lg:pb-2">
+          <div className="flex items-end justify-center lg:col-span-3 lg:pb-2">
             <img
               src="/images/logo.png"
               alt="HelloWorld logo"
-              className="w-full h-auto"
+              className="w-48 h-auto max-w-full sm:w-full"
             />
           </div>
         </div>
@@ -47,7 +47,7 @@ const About = () => {
             </p>
           </div>
           <div className="lg:col-span-7 lg:border-l-2 lg:border-foreground/15 lg:pl-14">
-            <p className="font-sans text-2xl leading-relaxed text-foreground/75">
+            <p className="font-sans text-xl leading-[1.6] text-foreground/75 sm:text-2xl sm:leading-relaxed">
               Welcome to Hello World 2026, built for the newcomer, the first-timer, the
               just-curious. Our mission is to lower the barrier to entry into tech. Many of our
               hackers are strong technical students who have never attended a hackathon before.
@@ -64,7 +64,7 @@ const About = () => {
           {stats.map((s, i) => (
             <div
               key={s.label}
-              className="group relative flex flex-col gap-3 border-2 border-foreground/20 bg-background/70 backdrop-blur-sm px-6 py-8 pixel-shadow-sm transition-colors duration-300 hover:border-primary sm:px-8 sm:py-10"
+              className="group relative flex flex-col gap-3 border-2 border-foreground/20 bg-background/70 backdrop-blur-sm px-4 py-6 pixel-shadow-sm transition-colors duration-300 hover:border-primary sm:px-8 sm:py-10"
             >
               <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                 {String(i + 1).padStart(2, "0")}

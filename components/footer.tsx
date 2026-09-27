@@ -6,10 +6,10 @@ export default function Footer({ sponsorLogoSrc = "/images/sfab.jpg", sponsorHre
             <div className="max-w-6xl mx-auto text-center">
 
                 {/* Social links */}
-                <div className="flex justify-center flex-wrap gap-10">
+                <div className="flex justify-center flex-wrap gap-8 sm:gap-10">
                     <a
                         href="https://www.instagram.com/helloworldpurdue?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        className="border-2 border-foreground/25 bg-background/60 p-3 text-muted-foreground transition-colors duration-300 hover:border-[#E1306C] hover:text-[#E1306C]"
+                        className="flex h-14 w-14 items-center justify-center border-2 border-foreground/25 bg-background/60 p-0 text-muted-foreground transition-colors duration-300 hover:border-[#E1306C] hover:text-[#E1306C] sm:h-auto sm:w-auto sm:p-3"
                         aria-label="Instagram"
                     >
                         <svg
@@ -29,7 +29,7 @@ export default function Footer({ sponsorLogoSrc = "/images/sfab.jpg", sponsorHre
                     </a>
                     <a
                         href="https://discord.gg/ezmNSKXsfz"
-                        className="border-2 border-foreground/25 bg-background/60 p-3 text-muted-foreground transition-colors duration-300 hover:border-[#5865F2] hover:text-[#5865F2]"
+                        className="flex h-14 w-14 items-center justify-center border-2 border-foreground/25 bg-background/60 p-0 text-muted-foreground transition-colors duration-300 hover:border-[#5865F2] hover:text-[#5865F2] sm:h-auto sm:w-auto sm:p-3"
                         aria-label="Discord"
                     >
                         <svg

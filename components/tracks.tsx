@@ -30,17 +30,17 @@ const TRACKS = [
 
 export default function Tracks() {
   return (
-    <section id="tracks" className="relative px-6 py-28 sm:px-10 lg:px-16">
+    <section id="tracks" className="relative px-4 py-16 sm:px-10 sm:py-28 lg:px-16">
       <div className="relative mx-auto max-w-6xl">
         {/* asymmetric display heading */}
         <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-10">
-          <h2 className="font-serif text-2xl leading-[1.4] tracking-tight text-foreground pixel-text sm:text-3xl lg:col-span-9 lg:text-4xl">
+          <h2 className="font-serif text-xl leading-[1.5] tracking-tight text-foreground pixel-text sm:text-3xl sm:leading-[1.4] lg:col-span-9 lg:text-4xl">
             Four tracks,
             <br />
             <span className="text-primary">one weekend</span>{" "}
             to build.
           </h2>
-          <p className="flex items-end font-sans text-xl leading-relaxed text-foreground/60 lg:col-span-3 lg:pb-2">
+          <p className="flex items-end font-sans text-xl leading-[1.6] text-foreground/60 sm:text-xl sm:leading-relaxed lg:col-span-3 lg:pb-2">
             Pick a direction, form a team, and spend 24 hours prototyping something that matters.
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function Tracks() {
 
               {/* description */}
               <div className="lg:col-span-7 lg:col-start-6">
-                <p className="font-sans text-2xl leading-relaxed text-foreground/70 transition-colors duration-300 group-hover:text-foreground/85">
+                <p className="font-sans text-xl leading-[1.6] text-foreground/70 transition-colors duration-300 group-hover:text-foreground/85 sm:text-2xl sm:leading-relaxed">
                   {track.description}
                 </p>
               </div>

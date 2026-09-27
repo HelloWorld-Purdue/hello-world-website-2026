@@ -13,15 +13,15 @@ const SPONSORS = [
 
 export default function Sponsors() {
   return (
-    <section id="sponsors" className="relative px-6 py-28 sm:px-10 lg:px-16">
+    <section id="sponsors" className="relative px-4 py-16 sm:px-10 sm:py-28 lg:px-16">
       <div className="relative mx-auto max-w-6xl">
         {/* asymmetric display heading */}
         <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:gap-10">
-          <h2 className="font-serif text-2xl leading-[1.4] tracking-tight text-foreground pixel-text sm:text-3xl lg:col-span-9 lg:text-4xl">
+          <h2 className="font-serif text-xl leading-[1.5] tracking-tight text-foreground pixel-text sm:text-3xl sm:leading-[1.4] lg:col-span-9 lg:text-4xl">
             Built with our{" "}
             <span className="text-primary">sponsors</span>.
           </h2>
-          <p className="flex items-end font-sans text-xl leading-relaxed text-foreground/60 lg:col-span-3 lg:pb-2">
+          <p className="flex items-end font-sans text-xl leading-[1.6] text-foreground/60 sm:leading-relaxed lg:col-span-3 lg:pb-2">
             Free for every hacker, thanks to the companies backing this event.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function Sponsors() {
           {SPONSORS.map((slug) => (
             <div
               key={slug}
-              className="group flex items-center justify-center border-b-2 border-r-2 border-foreground/20 p-8 transition-colors duration-300 hover:bg-foreground/[0.04]"
+              className="group flex items-center justify-center border-b-2 border-r-2 border-foreground/20 p-4 sm:p-8 transition-colors duration-300 hover:bg-foreground/[0.04]"
             >
               <img
                 src={`/sponsors/${slug}.png`}

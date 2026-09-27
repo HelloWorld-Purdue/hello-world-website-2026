@@ -140,6 +140,10 @@
   img {
     image-rendering: pixelated;
   }
+  /* anchor targets clear the fixed header when jumped to */
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
 }
 
 @layer utilities {
@@ -151,6 +155,12 @@
   .pixel-text-sm {
     text-shadow:
       2px 2px 0 rgba(0, 0, 0, 0.85);
+  }
+  /* chunky pixel drop shadow, scaled down on small screens */
+  @media (max-width: 640px) {
+    .pixel-text {
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.85);
+    }
   }
   /* hard offset shadow for panels/buttons, 16-bit dialog style */
   .pixel-shadow {

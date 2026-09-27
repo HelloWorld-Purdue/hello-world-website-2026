@@ -10,20 +10,20 @@ export default function Faqs({ faqs }: FaqsProps) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faqs" className="relative px-6 py-28 sm:px-10 lg:px-16">
+    <section id="faqs" className="relative px-4 py-16 sm:px-10 sm:py-28 lg:px-16">
       <div className="relative mx-auto max-w-6xl">
         <div className="mt-16 grid gap-12 lg:grid-cols-12 lg:gap-14">
           {/* sticky intro column */}
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28">
-              <h2 className="font-serif text-2xl leading-[1.4] tracking-tight text-foreground pixel-text sm:text-3xl">
+              <h2 className="font-serif text-xl leading-[1.5] tracking-tight text-foreground pixel-text sm:text-3xl sm:leading-[1.4]">
                 Frequently
                 <br />
                 <span className="text-primary">asked</span>
                 <br />
                 questions
               </h2>
-              <p className="mt-6 max-w-xs font-sans text-xl leading-relaxed text-foreground/60">
+              <p className="mt-6 max-w-xs font-sans text-xl leading-[1.6] text-foreground/60 sm:text-xl sm:leading-relaxed">
                 Everything you might be wondering about HelloWorld, gathered in one place.
                 Still stuck? Find us in Discord or on-site.
               </p>
@@ -40,12 +40,12 @@ export default function Faqs({ faqs }: FaqsProps) {
                     <button
                       onClick={() => setOpen(isOpen ? null : i)}
                       aria-expanded={isOpen}
-                      className="group flex w-full items-start gap-5 py-7 text-left transition-colors duration-300 hover:text-primary"
+                      className="group flex w-full items-start gap-4 py-5 text-left transition-colors duration-300 hover:text-primary sm:gap-5 sm:py-7"
                     >
                       <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground pt-2 tabular-nums">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <h3 className="flex-1 font-mono text-lg font-normal leading-snug text-foreground transition-colors duration-300 group-hover:text-primary sm:text-xl">
+                      <h3 className="flex-1 font-mono text-base font-normal leading-snug text-foreground transition-colors duration-300 group-hover:text-primary sm:text-xl">
                         {faq.question}
                       </h3>
                       <span className="relative mt-2 h-4 w-4 shrink-0">
@@ -65,7 +65,7 @@ export default function Faqs({ faqs }: FaqsProps) {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="pb-7 pl-12 pr-10 font-sans text-xl leading-relaxed text-foreground/70">
+                        <p className="pb-6 pl-9 pr-2 font-sans text-xl leading-[1.6] text-foreground/70 sm:pb-7 sm:pl-12 sm:pr-10 sm:leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>

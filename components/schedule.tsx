@@ -135,10 +135,10 @@ export default function Schedule() {
   const day = SCHEDULE[activeDay];
 
   return (
-    <section id="schedule" className="relative px-6 py-28 sm:px-10 lg:px-16">
+    <section id="schedule" className="relative px-4 py-16 sm:px-10 sm:py-28 lg:px-16">
       <div className="relative mx-auto max-w-6xl">
         {/* day switcher */}
-        <div className="mt-12 flex items-center gap-8 border-b-2 border-foreground/20">
+        <div className="mt-12 flex items-center gap-4 border-b-2 border-foreground/20 sm:gap-8">
           {SCHEDULE.map((d, i) => {
             const isActive = i === activeDay;
             return (
@@ -146,7 +146,7 @@ export default function Schedule() {
                 key={d.label}
                 onClick={() => setActiveDay(i)}
                 aria-pressed={isActive}
-                className="group relative -mb-px flex flex-col gap-1 pb-5 text-left"
+                className="group relative -mb-px flex flex-1 flex-col gap-1 pb-5 text-left sm:flex-initial"
               >
                 <span
                   className={`font-mono text-[10px] uppercase tracking-[0.3em] transition-colors duration-300 ${
@@ -219,7 +219,7 @@ export default function Schedule() {
                   )}
                 </div>
                 {event.description && (
-                  <p className="mt-4 max-w-2xl font-sans text-2xl leading-relaxed text-foreground/70 transition-colors duration-300 group-hover:text-foreground/85">
+                  <p className="mt-4 max-w-2xl font-sans text-xl leading-[1.6] text-foreground/70 transition-colors duration-300 group-hover:text-foreground/85 sm:text-2xl sm:leading-relaxed">
                     {event.description}
                   </p>
                 )}
@@ -229,7 +229,7 @@ export default function Schedule() {
         </ol>
 
         {/* discord note */}
-        <p className="mt-14 max-w-2xl font-sans text-2xl leading-relaxed text-foreground/60">
+        <p className="mt-14 max-w-2xl font-sans text-xl leading-[1.6] text-foreground/60 sm:text-2xl sm:leading-relaxed">
           Everything live — announcements, room changes, last-minute workshops — goes out in our{" "}
           <a
             href="https://discord.gg/ezmNSKXsfz"
